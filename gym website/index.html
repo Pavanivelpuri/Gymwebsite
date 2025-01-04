@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GymFluencer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header Section -->
+<header class="header">
+  <div class="logo">
+    <img src="images/intorpart.jpg" alt="GymFluencer Logo" class="logo-image">    
+    GymFluencer
+  </div>
+  <nav class="nav">
+    <a href="#features">Features</a>
+    <a href="#workout">Workout Plans</a>
+    <a href="#views">Reviews</a>
+    <a href="#doubts">FAQ's</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
+  <div class="auth-buttons">
+    <button class="get-started">Get Started</button>
+    <button class="login">Login</button>
+  </div>
+</header>
+
+  
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <!--<img src="your-image-url.jpg" alt="Fitness Hero" class="hero-image">-->
+    <div class="hero-text">
+      <h1>Track Your Fitness Journey</h1>
+      <p>
+        Discover the ultimate fitness companion with GymFluencer. Effortlessly log your workouts, count reps, and track calories burned.
+        Stay motivated and achieve your goals with our user-friendly interface.
+      </p>
+    </div>
+  </section>
+
+<!-- Features Section -->
+<section id="features" class="features-section">
+  <h2>Our Features</h2>
+  <div class="features-grid">
+    <div class="feature-card" id="workout-logging">
+      <img src="images/feature1(0).png" alt="Effortless Workout Logging">
+      <h3>Effortless Workout Logging</h3>
+      <p class="feature-description">Easily log your workouts and monitor your progress.</p>
+    </div>
+    <div class="feature-card" id="rep-counting">
+      <img src="images/feature2(0).png" alt="Accurate Rep Counting">
+      <h3>Accurate Rep Counting</h3>
+      <p class="feature-description">Count reps accurately with AI-powered tracking.</p>
+    </div>
+    <div class="feature-card" id="calorie-calculation">
+      <img src="images/feature3.png" alt="Calorie Calculation">
+      <h3>Calorie Calculation Made Easy</h3>
+      <p class="feature-description">Keep track of calories burned during workouts.</p>
+    </div>
+    <div class="feature-card" id="personalized-plan">
+      <img src="images/feature4.png" alt="Personalized Workout Plan">
+      <h3>Personalized Workout Plans</h3>
+      <p class="feature-description">AI-tailored plans based on your fitness goals.</p>
+    </div>
+    <div class="feature-card" id="diet-plan">
+      <img src="images/feature5.png" alt="Personalized Diet Plan">
+      <h3>Personalized Diet Plan</h3>
+      <p class="feature-description">Custom diet plans for your health and fitness.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Popup Modal for Feature Description -->
+<div id="feature-popup" class="popup-modal">
+  <div class="popup-content">
+    <span class="close-popup-btn">&times;</span>
+    <h3 id="popup-title"></h3>
+    <p id="popup-description"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+
+<!------------------------------------------------------------------------------------------------------------------------------------>
+
+<!-- Workout Plan Section -->
+<section id="workout" class="workout-plan">
+  <h2 class="workout-heading">Workout Plan</h2>
+
+  <!-- Step Container for Side-by-Side Layout -->
+  <div class="step-container">
+
+    <!-- Step 1: Introduction to Logging -->
+    <section id="step-1" class="step-section">
+      <div class="step-inner">
+        <div class="step-front">
+          <h3 class="step-title">Step 1: Understand the Power of Tracking</h3>
+          <p class="step-description">
+            Logging your exercises is crucial for tracking your fitness progress. 
+            It helps you stay focused and motivated on your fitness journey.
+          </p>
+        </div>
+        <div class="step-back">
+          <div class="step-process" id="process-1">
+            <p>This is where we explain how to track your exercises, stay motivated, and use tools to monitor your fitness progress.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Step 2: Choose Exercise Type -->
+    <section id="step-2" class="step-section">
+      <div class="step-inner">
+        <div class="step-front">
+          <h3 class="step-title">Step 2: Choose Your Exercise Type</h3>
+          <p class="step-description">
+            Choose the type of exercise you will be doing. Whether it's cardio, strength training, or flexibility exercises, we have you covered.
+          </p>
+        </div>
+        <div class="step-back">
+          <div class="step-process" id="process-2">
+            <h4>Select an Exercise Type:</h4>
+            <button class="exercise-button">Cardio</button>
+            <button class="exercise-button">Strength Training</button>
+            <button class="exercise-button">Flexibility</button>
+            <button class="exercise-button">Other</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Step 3: Set Reps and Sets -->
+    <section id="step-3" class="step-section">
+      <div class="step-inner">
+        <div class="step-front">
+          <h3 class="step-title">Step 3: Set Your Reps and Sets</h3>
+          <p class="step-description">
+            This step involves setting the number of repetitions and sets for each exercise to define your workout intensity.
+          </p>
+        </div>
+        <div class="step-back">
+          <div class="step-process" id="process-3">
+            <form id="exercise-form">
+              <label for="reps">Reps: </label>
+              <input type="number" id="reps" name="reps" required>
+              <br>
+              <label for="sets">Sets: </label>
+              <input type="number" id="sets" name="sets" required>
+              <br>
+              <button class="submit-btn">Log Exercise</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Step 4: Track Calories Burned -->
+    <section id="step-4" class="step-section">
+      <div class="step-inner">
+        <div class="step-front">
+          <h3 class="step-title">Step 4: Track Calories Burned</h3>
+          <p class="step-description">
+            Input the number of calories burned during your workout. This helps you track your overall fitness progress.
+          </p>
+        </div>
+        <div class="step-back">
+          <div class="step-process" id="process-4">
+            <label for="calories-burned">Calories Burned: </label>
+            <input type="number" id="calories-burned" name="calories-burned" placeholder="e.g., 200" required>
+            <button class="log-btn">Log Calories</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Step 5: Review Your Exercise Log -->
+    <section id="step-5" class="step-section">
+      <div class="step-inner">
+        <div class="step-front">
+          <h3 class="step-title">Step 5: Review Your Exercise Log</h3>
+          <p class="step-description">
+            After logging your exercises and calories, review your log to check your progress.
+          </p>
+        </div>
+        <div class="step-back">
+          <div class="step-process" id="process-5">
+            <p>Exercise Type: <span id="review-exercise-type">Cardio</span></p>
+            <p>Reps: <span id="review-reps">12</span></p>
+            <p>Sets: <span id="review-sets">3</span></p>
+            <p>Calories Burned: <span id="review-calories">200</span></p>
+            <button class="save-btn">Save Exercise Log</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</section>
+
+<script>
+  // Add event listeners to step sections to toggle the flip effect
+document.querySelectorAll('.step-section').forEach((section) => {
+  section.addEventListener('click', function () {
+    // Toggle the active class to trigger flipping
+    this.classList.toggle('active');
+  });
+});
+
+</script>
+
+
+
+
+<!------------------------------------------------------------------------------------------------------------------------>
+
+<!-- What Users Say Section -->
+<section id="views" class="reviews-section">
+  <h2 class="reviews-heading">What Users Say</h2>
+  <div class="reviews-container">
+    <!-- Sample Reviews -->
+    <div class="review-card">
+      <p>"GymFluencer has changed the way I track my workouts! The interface is simple and easy to use."</p>
+      <span class="user-name">- Sarah M.</span>
+      <p>Rating: ⭐⭐⭐⭐⭐</p>
+    </div>
+    <div class="review-card">
+      <p>"The personalized workout plans helped me stay motivated and achieve my goals faster."</p>
+      <span class="user-name">- John D.</span>
+      <p>Rating: ⭐⭐⭐⭐</p>
+    </div>
+    <div class="review-card">
+      <p>"I love the calorie tracking feature. It’s so helpful for keeping track of my progress."</p>
+      <span class="user-name">- Emma W.</span>
+      <p>Rating: ⭐⭐⭐⭐⭐</p>
+    </div>
+  </div>
+
+  <!-- Feedback Form Section -->
+  <div class="feedback-form">
+    <h3>Leave Your Feedback</h3>
+    <form action="#">
+      <div class="rating">
+        <label for="rating">Rating:</label>
+        <select id="rating" name="rating">
+          <option value="1">1 Star</option>
+          <option value="2">2 Stars</option>
+          <option value="3">3 Stars</option>
+          <option value="4">4 Stars</option>
+          <option value="5">5 Stars</option>
+        </select>
+      </div>
+      <textarea id="feedback" name="feedback" rows="4" placeholder="Write your feedback here..."></textarea>
+      <button type="submit" class="submit-review">Submit Review</button>
+    </form>
+  </div>
+</section>
+
+  
+<!--------------------------------------------------------------------------------------------------------------------->
+  <!-- FAQs Section -->
+<section id="doubts" class="Queries">
+  <h2>Frequently Asked Questions (FAQs)</h2>
+  <div class="faq-container">
+    <div class="faq-item">
+      <h3 class="faq-question">How do I log my exercises?</h3>
+      <p class="faq-answer">
+        You can log your exercises by selecting your exercise type, setting the number of reps and sets, and entering the calories burned during your workout.
+      </p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-question">Can I track my progress over time?</h3>
+      <p class="faq-answer">
+        Yes, you can track your progress by saving your exercise logs and reviewing them periodically to see improvements in reps, sets, and calories burned.
+      </p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-question">Is there a way to personalize my workout plan?</h3>
+      <p class="faq-answer">
+        Absolutely! GymFluencer offers personalized workout plans tailored to your fitness goals.
+      </p>
+    </div>
+  </div>
+</section>
+
+  <!------------------------------------------------------------------------------------------------------------------------------------>
+
+ <!-- Contact Us Section -->
+<section id="contact" class="contact-section">
+  <h2 class="contact-heading">Contact Us</h2>
+  <div class="contact-container">
+    <p>If you have any questions or need support, feel free to reach out to us using the form below.</p>
+    
+    <form id="contact-form" class="contact-form">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+      <label for="message">Your Message:</label>
+      <textarea id="message" name="message" rows="5" required placeholder="Enter your message"></textarea>
+
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer">
+  <p>&copy; 2024 GymFluencer. All rights reserved.</p>
+</footer>
+
+
+
+</body>
+</html>

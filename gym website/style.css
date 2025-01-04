@@ -1,0 +1,734 @@
+/* General Styling */
+body {
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+  background-color: white; /* White background */
+  color: #6a4e1f; /* Purple text color */
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white; /* White background for header */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added subtle shadow for depth */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Ensure the header stays on top */
+}
+
+/* Logo Styling */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #6a4e1f; /* Purple color for logo */
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 50%; /* Rounded logo image */
+}
+
+/* Navigation Styling */
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav a {
+  margin: 0 15px;
+  color: #6a4e1f; /* Purple text color for navigation links */
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.nav a:hover {
+  color: #c6a86e; /* Light gold hover effect for links */
+}
+
+/* Authentication Buttons */
+.auth-buttons button {
+  padding: 10px 20px;
+  background-color: #6a4e1f; /* Purple background for buttons */
+  border: none;
+  color: white; /* White text on buttons */
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.auth-buttons button:hover {
+  background-color: #8b6d47; /* Lighter purple on hover */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center; /* Center the header elements for small screens */
+  }
+
+  .logo {
+    margin-bottom: 10px; /* Add margin for spacing */
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 10px; /* Space out the navigation links vertically */
+  }
+
+  .auth-buttons {
+    margin-top: 10px;
+    flex-direction: column;
+    gap: 10px; /* Space out the buttons vertically */
+  }
+
+  .auth-buttons button {
+    width: 100%; /* Make the buttons full-width on small screens */
+  }
+}
+
+  
+/* Hero Section */
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  background-image: url('images/animatedboygym.jpg'); /* Replace with your HD image URL */
+  background-size: cover; /* Ensures the image covers the entire hero section */
+  background-repeat: no-repeat; /* Prevents image repetition */
+  background-position: center center; /* Ensures the image is centered */
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full width */
+  overflow: hidden; /* Prevents any overflow outside the hero section */
+}
+
+/* Hero Text */
+.hero-text {
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent background for better text contrast */
+  padding: 1.5rem 2rem; /* Padding for text */
+  border-radius: 10px; /* Rounded corners */
+  max-width: 80%; /* Ensures text doesn't stretch too wide */
+  margin: 0 auto; /* Centers the content horizontally */
+  bottom: 20%; /* Adjust this to control how far from the bottom you want the box */
+
+  opacity: 0; /* Start with the text hidden */
+  animation: bounceInOut 20s ease-in-out infinite; /* Animation name, duration (120s), easing function */
+}
+
+/* Bounce In and Out Animation */
+@keyframes bounceInOut {
+  0% {
+    transform: translateY(100px); /* Start below the screen */
+    opacity: 0; /* Hidden initially */
+  }
+  25% {
+    transform: translateY(-10px); /* Small upward bounce */
+    opacity: 1; /* Fully visible */
+  }
+  50% {
+    transform: translateY(0); /* Main position */
+    opacity: 1; /* Fully visible */
+  }
+  75% {
+    transform: translateY(-10px); /* Small upward bounce */
+    opacity: 1; /* Fully visible */
+  }
+  100% {
+    transform: translateY(100px); /* End below the screen again */
+    opacity: 0; /* Hidden */
+  }
+}
+
+/* Heading Text */
+.hero-text h1 {
+  text-decoration: #4d3a19;
+  font-size: 2.5rem; /* Medium size */
+  animation: bounceInOut 20s ease-in-out infinite; /* Apply the same animation to the header */
+}
+
+/* Paragraph Text */
+.hero-text p {
+  font-size: 1.2rem;
+  margin-top: 1rem; /* Spacing between heading and paragraph */
+  animation: bounceInOut 20s ease-in-out infinite; /* Apply the same animation to the paragraph */
+}
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/*---------------------------------------------------------------------------------------------------*/
+
+/* Features Section */
+.features-section {
+  padding: 2rem;
+  background-color: white;
+}
+
+.features-section h2 {
+  font-size: 2.2rem;
+  color: #6a4e1f; /* Cream color for the title */
+  text-align: center;
+}
+
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.feature-card {
+  background-color: #f8f1e5; /* Light cream color for the card */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  position: relative;
+}
+
+.feature-card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.feature-card h3 {
+  color: #6a4e1f; /* Cream color for the title */
+}
+
+/* Hide the descriptions initially */
+.feature-description {
+  display: none; /* Initially hidden */
+}
+
+/* Basic styling for the popup box */
+.popup-modal {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 400px;
+  background-color: white;
+  border: 2px solid purple;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  padding: 20px;
+  text-align: center;
+  z-index: 9999;
+}
+
+/* The popup content inside the box */
+.popup-content {
+  opacity: 0;
+  animation: popupAnimation 0.5s forwards;
+}
+
+@keyframes popupAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Close button for the popup */
+.close-popup-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #aaa;
+  background: none;
+  border: none;
+}
+
+.close-popup-btn:hover {
+  color: #555;
+}
+
+/* Styling for the typing effect */
+.typing-effect {
+  font-size: 18px;
+  color: #4b0082; /* Purple color */
+  font-family: 'Courier New', monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 3s steps(30) forwards;
+}
+
+/* Typing animation */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
+/*--------------------------------------------------------------------------------------*/
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f7f3;
+}
+
+.workout-plan {
+  padding: 40px;
+}
+
+.workout-heading {
+  text-align: center;
+  color: #4d3a19;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+/* Step Container */
+.step-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px; /* Horizontal gap between boxes */
+  padding: 20px 0;
+}
+
+/* Step Section */
+.step-section {
+  width: 300px;
+  height: 300px;
+  perspective: 1000px; /* Enables 3D effect */
+  margin-bottom: 40px; /* Vertical space between rows */
+}
+
+.step-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease-in-out;
+}
+
+.step-section.active .step-inner {
+  transform: rotateY(180deg); /* Flip the card */
+}
+
+/* Front and Back Styling */
+.step-front, .step-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Front Side */
+.step-front {
+  background-color: #f5f0e1; /* Light cream color */
+  color: #4d3a19; /* Dark brown text */
+  font-weight: bold;
+}
+
+/* Back Side */
+.step-back {
+  background-color: #ffffff; /* White background */
+  color: #daa520; /* Goldenrod text */
+  font-weight: bold;
+  transform: rotateY(180deg); /* Ensure it's flipped initially */
+}
+
+/* Button Styles */
+button {
+  padding: 10px 20px;
+  background-color: #4d3a19; /* Dark brown */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+button:hover {
+  background-color: #8b6d47; /* Slightly lighter brown */
+}
+
+/* Form Input Styling */
+input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.submit-btn, .log-btn, .save-btn {
+  background-color: #c6a86e; /* Light gold */
+  color: #ffffff;
+}
+
+.submit-btn:hover, .log-btn:hover, .save-btn:hover {
+  background-color: #8b6d47; /* Lighter brown for hover */
+}
+
+/* Text Styling for Titles and Descriptions */
+.step-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.step-description {
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Specific Styling for Buttons in Step 2 */
+.exercise-button {
+  padding: 10px 15px;
+  margin: 5px;
+  font-size: 1rem;
+  background-color: #c6a86e; /* Light gold */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.exercise-button:hover {
+  background-color: #8b6d47; /* Hover effect */
+}
+
+
+ /*-----------------------------------------------------------------------------------------*/ 
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f7f3;
+}
+
+.workout-plan {
+  padding: 40px;
+}
+
+.workout-heading {
+  text-align: center;
+  color: #4d3a19;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+/* What Users Say Section */
+.reviews-section {
+  padding: 2rem;
+  background-color: #f5f0e1; /* Light cream background */
+  max-width: 1200px;
+  margin: 40px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reviews-heading {
+  text-align: center;
+  color: #4d3a19;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.reviews-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+.review-card {
+  background-color: #fff; /* White background for the review cards */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.review-card p {
+  color: #4d3a19; /* Dark brown text for the review */
+  font-size: 1rem;
+  margin-bottom: 15px; /* Spacing between review text and rating */
+}
+
+.user-name {
+  display: block;
+  margin-top: 10px;
+  color: #c6a86e; /* Light gold text for the user name */
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Rating Styling */
+.review-card p:last-child {
+  font-size: 1.2rem;
+  color: #f5a623; /* Gold color for the rating */
+  margin-top: 10px;
+}
+
+/* Feedback Form */
+.feedback-form {
+  margin-top: 30px;
+  text-align: center;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-form h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #4d3a19;
+}
+
+.feedback-form select,
+.feedback-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.feedback-form button {
+  padding: 10px 20px;
+  background-color: #c6a86e; /* Light gold */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.feedback-form button:hover {
+  background-color: #8b6d47; /* Darker gold on hover */
+}
+
+
+  /*-----------------------------------------------------------------------------------------------*/
+/* FAQs Section */
+.faqs-section {
+  padding: 3rem; /* Increased padding for more spacing */
+  background-color: #f5f0e1; /* Light cream background for consistency */
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom:10%
+}
+
+/* FAQ Container */
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* Increased space between items */
+  justify-content: center;
+  align-items: center; /* Center FAQ boxes horizontally */
+  margin-top: 20px;
+}
+
+/* FAQ Item */
+.faq-item {
+  background-color: #fff; /* White background for FAQ items */
+  padding: 30px; /* Increased padding for a larger box */
+  border-radius: 12px; /* Slightly rounder corners */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Slightly bigger shadow */
+  width: 90%; /* Increased width to 90% for larger boxes */
+  max-width: 800px; /* Increased max-width to make the boxes wider */
+  min-height: 100px; /* Ensures the box maintains a good height */
+}
+
+/* FAQ Question */
+.faq-question {
+  color: #c6a86e; /* Light gold color for questions */
+  font-size: 1.6rem; /* Larger font size for the question */
+  font-weight: bold;
+  margin-bottom: 15px; /* Increased space below the question */
+}
+
+/* FAQ Answer */
+.faq-answer {
+  color: #4d3a19; /* Dark brown color for the answer text */
+  font-size: 1.2rem; /* Increased font size for the answer */
+  margin-top: 10px;
+}
+
+/* Heading Styling */
+h2 {
+  text-align: center;
+  color: #4d3a19; /* Dark brown color */
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+
+  
+  /*--------------------------------------------------------------------------------------------------------*/
+ /* Contact Us Section */
+.contact-section {
+  padding: 2rem;
+  background-color: #f5f0e1; /* Light cream background */
+  text-align: center;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin-top: 10%;
+}
+
+
+.contact-heading {
+  font-size: 2.5rem;
+  color: #4d3a19; /* Dark brown text */
+  margin-bottom: 20px;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #ffffff; /* White background for the form */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container p {
+  font-size: 1.1rem;
+  color: #4d3a19;
+  margin-bottom: 30px;
+}
+
+.contact-form label {
+  font-size: 1.1rem;
+  color: #4d3a19;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  font-size: 1rem;
+  width: 100%;
+  border: 1px solid #4d3a19;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background-color: #f9f7f3; /* Light cream background */
+  color: #4d3a19;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.submit-btn {
+  padding: 12px 25px;
+  background-color: #c6a86e; /* Light gold */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 100%;
+  max-width: 200px;
+  margin: 10px auto;
+}
+
+.submit-btn:hover {
+  background-color: #8b6d47; /* Darker gold for hover effect */
+}
+
+/* Footer Section */
+.footer {
+  background-color: #f5f0e1; /* Light cream background */
+  padding: 1rem;
+  text-align: center;
+  color: #4d3a19;
+  margin-top: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer p {
+  font-size: 1rem;
+  color: #4d3a19;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-form {
+    width: 90%;
+  }
+
+  .footer {
+    padding: 0.8rem;
+  }
+
+  .footer p {
+    font-size: 0.9rem;
+  }
+}
+
+
+  
